@@ -1,0 +1,17 @@
+ {% extends 'layout.html' %}
+ {% block body %}
+<div class="container" >
+            <br>
+    {% from "_formhelpers.html" import render_field %}
+    <h2 class="text-capitalize display-4 text-center">login</h2>
+    <form method="POST" action="">
+        <div class="form-group">
+            {{render_field(form.email, class_="form-control")}}
+            {{render_field(form.password, class_="form-control")}}
+            <input type="submit" class="btn btn-outline-success" value="submit">
+        </div>
+    </form> 
+</div>
+        
+ {% endblock %}
+    
